@@ -1,0 +1,642 @@
+@import 'components/normalize';
+@import 'components/base';
+@import 'components/typography';
+@import 'components/animations';
+
+body {
+	font-family: $title-font;
+	width: 100%;
+	
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.headerInner {
+	display: flex;
+	justify-content: space-between;
+	align-items: left;
+}
+
+header {
+	background-color: $mainBlack;
+	height: 100vh;
+	color: $whiteish;
+	text-transform: uppercase;
+	margin: 0;
+		h1 {
+			margin: 0;
+			font-size: 80px;
+			letter-spacing: 2px;
+		}
+		h2 {
+			font-size: 32px;
+			font-weight: 400;
+			margin-bottom: 5px;
+			letter-spacing: 4px;
+		}
+		h3 {
+			font-weight: 400;
+			letter-spacing: 4px;
+			margin-top: 0;
+		}
+}
+
+.navBar {
+	padding: 40px 0 20px;
+}
+
+.navList {
+	list-style: none;
+	margin: 0;
+	margin-bottom: 50px;
+	padding: 20px 0;
+	display: flex;
+	justify-content: flex-end;
+		a {
+			text-decoration: none;
+			color: $whiteish;
+			padding: 0 20px;
+			font-weight: lighter;
+			font-family: $title-font;
+			letter-spacing: 2px;
+			font-weight: 300;
+			position: relative;
+			display: block;
+		}
+}
+
+.navList li a:hover {
+	// background: $whiteish;
+	-webkit-animation: text-shadow-pop-tr 0.6s both;
+			animation: text-shadow-pop-tr 0.6s both;
+}
+
+// .navList a:hover:after {
+// 	width: 100%;
+// }
+
+
+.headshotBox {
+	width: 35%;
+	position: relative;
+	top: 120px;
+
+	img {
+		width: 100%;
+		// height: auto;
+		z-index: 10;
+		// position: relative;
+	}
+}
+
+.headshotBox {
+	position: fixed;
+	right: 120px;
+	z-index: 2;
+}
+
+.headerText {
+	padding-right: 30%;
+	margin-top: 30px;
+}
+
+.hidden {
+	display: none;
+	position: relative;
+	width: 40%;
+	float: right;
+		img {
+			width: 100%;
+		}
+}
+
+
+// @media (max-width: 1250px) {
+// 	.headerText {
+// 		width: 75%;
+// 	}
+// }
+
+.frameOffset {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	z-index: 0;
+	border: 3px solid $whiteish
+}
+
+.about {
+	background: $secBlack;
+	padding: 80px 0 100px;;
+	z-index: 4;
+}
+
+.skills, .works, .contactSection, footer {
+	z-index: 4;
+	position: relative;
+}
+
+.aboutContainer {
+	// display: flex;
+	// flex-direction: column;
+	position: relative;
+}
+
+
+.about p {
+		// background: $whiteish;
+		width: 50%;
+		color: $whiteish;
+		font-family: $body;
+		font-weight: 400;
+		padding: 30px 30px 0 0;
+		line-height: 2;
+		text-align: left;
+		margin: 0;
+		// box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.50);
+	}
+
+.about h2, .skills h2, .works h2 {
+	color: $whiteish;
+	border-bottom: 3px solid $whiteish;
+	margin: 0;
+	margin-bottom: 60px;
+	width: 20%;
+	padding: 0 10px 5px 0;
+	text-transform: uppercase;
+}
+
+.about h2 {
+	margin-bottom: 0;
+}
+
+.skills {
+	background: $mainBlack;
+	padding: 80px 0;
+	h2 {
+		padding-right: 0;
+	}
+}
+
+
+.learning {
+	color: #764ABC;
+	position: absolute;
+	right: 0;
+	top: -4%;
+}
+
+.toolBox {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+
+.toolBox i, .redux {
+	font-size: 100px;
+	color: $whiteish;
+	margin: 20px 20px;
+}
+
+i.devicon-wordpress-plain {
+	color:#764ABC
+}
+
+.redux, .firebase {
+	width: 100px;
+	height: 100px;
+}
+
+.skillsInner {
+	margin-top: 50px;
+	position: relative;
+}
+
+.skills h2 {
+	text-align: right;
+	float: right;
+	margin-right: 10%;
+}
+
+h4.sneakyWorks {
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: -20px;
+	text-align: center;
+	display: none;
+	color: $whiteish;
+	font-family: $title-font;
+	border-bottom: 3px solid $whiteish;
+	font-size: 20px;
+	padding: 0 5px 5px;
+	text-transform: uppercase;
+	width: 25%;
+	letter-spacing: 3px;
+}
+
+.works {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	// border-top: 5px solid $whiteish;
+	// border-bottom: 5px solid $whiteish;
+}
+
+.workBlocks {
+	display: flex;
+}
+
+.blackBlack, .offBlack {
+	width: 50%;
+	padding: 80px 3%;
+}
+
+
+
+.offBlack {
+	background: $secBlack;
+	
+}
+
+.workBlocks .left h2 {
+		// margin-left: 17%;
+		width: 45%;
+		margin-bottom: 0;
+	}
+
+.rightText h2 {
+	text-align: right;
+	margin-bottom: 0;
+	padding-right: 0;
+	// margin-right: 10%;
+	// float: right;
+	width: 70%;
+	// display: block;
+	// align-content: right;
+}
+
+.rightText p {
+	padding-right: 0;
+	padding-top: 30px;
+	text-align: right;
+	font-family: $body;
+	line-height: 2;
+	color: $whiteish;
+}
+
+.leftText p {
+	width: 70%;
+	// background: #e0d8d8;
+	padding: 30px 30px 30px 0px;
+	font-family: $body;
+	line-height: 2;
+	color: $whiteish;
+	// border: 10px groove $mainBlack;
+}
+
+.worksTextBox {
+	display: flex;
+	flex-direction: column;
+}
+
+.blackBlack {
+	background: $mainBlack;
+	// position: relative;
+}
+
+.screenshotContainer {
+	width: 70%;
+	margin: 20px auto;
+	position: relative;
+	
+		img {
+			width: 100%;
+			z-index: 10;
+			position: relative;
+		}
+}
+
+.workBlocks a {
+	background: $whiteish;
+	padding: 10px;
+	display: inline-block;
+	text-align: center;
+	min-width: 80px;
+	max-width: 80px;
+	color: $mainBlack;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: $title-font;
+	transition: 1s ease;
+	border: 1px solid transparent;
+}
+
+.workBlocks a:hover {
+	background: $mainBlack;
+	color: $whiteish;
+	border: 1px solid $whiteish;
+}
+
+.worksTextBox:nth-of-type(1n) {
+	margin-left: 17%;
+}
+
+.rightText {
+	margin-right: 17%;
+	margin-left: 0;
+	align-items: flex-end;
+}
+
+.frameOffsetRight {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 6%;
+	left: 5%;
+	z-index: 0;
+	border: 3px solid $whiteish
+}
+
+.linkBox {
+	margin-top: 15px;
+}
+
+.contactSection {
+	background: $mainBlack;
+	padding: 60px 0;
+	display: flex;
+	flex-direction: column;
+	h2 {
+		margin-top: 0;
+		margin: 0 auto;
+		font-family: $title-font;
+		text-transform: uppercase;
+		color: $whiteish;
+		border-bottom: 3px solid $whiteish;
+		margin-bottom: 40px;
+		display: inline-block;
+	}
+}
+
+.contactInner {
+	background: $mainBlack;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 60px 40px 60px;
+	
+	color: $whiteish;
+}
+
+.socialBox {
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+		a {
+			color: $whiteish;
+		}
+		p {
+			margin-bottom: 0;
+		}
+}
+
+.media {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	a {
+		margin: 10px 0;
+	}
+}
+
+.fa-twitter, .fa-github, .fa-linkedin-in, .fa-map-marker-alt {
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+.formBox {
+	width: 65%;
+	display: flex;
+	form {
+		width: 100%;
+	}
+}
+
+.nameBox, .emailBox, .textAreaBox {
+	display: flex;
+	flex-direction: column;
+	input, textarea {
+		background: none;
+		border: none;
+		border: 3px solid $whiteish;
+		margin: 10px 0;
+		color: $whiteish;
+		padding: 10px;
+	}
+}
+
+.nameBox input, .emailBox input {
+	height: 50px;
+} 
+
+.formBox label {
+	padding-top: 10px;
+}
+
+.sendMe {
+	background: none;
+	color: $whiteish;
+	border: 3px solid $whiteish;
+	padding: 10px 15px;
+	margin-top: 10px;
+}
+
+footer {
+	background: $mainBlack;
+	padding: 40px;
+	color: $whiteish;
+	font-family: $body;
+}
+
+footer p {
+	margin: 0;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+
+
+// MEDIA QUERIES
+
+@media (max-width: 1250px) {
+	.headerText {
+		width: 75%;
+	}
+}
+
+@media (max-width: 970px) {
+	.worksTextBox p {
+		width: 90%;
+		padding-top: 10px;
+		margin-bottom: 0;
+		padding-bottom: 20px;
+	}
+
+	.screenshotContainer {
+		margin-top: 40px;
+	}
+
+	.blackBlack, .offBlack {
+		padding: 40px 3%;
+	}
+}
+
+@media (max-width: 870px) {
+	.headshotBox {
+		right: 80px;
+	}
+	.devicon-babel-plain {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+	.headshotBox {
+		display: none;
+	}
+
+	.navList {
+		justify-content: center;
+	}
+
+	.navList li a:hover {
+	-webkit-animation: none;
+			animation: none;
+}
+
+	.hidden {
+		display: block;
+		margin-left: 30px;
+		margin-bottom: 30px;
+	}
+	.about p {
+		width: 100%
+	}
+	.aboutContainer {
+		position: relative;
+	}
+	.headerText {
+		width: 100%;
+		text-align: center;
+		padding-right: 0;
+			h3 {
+				margin-top: 20px;
+			}
+	}
+	.learning {
+		top: 0;
+	}
+
+}
+
+@media (max-width: 700px) {
+	h4.sneakyWorks {
+		display: inline-block;
+	}
+	.workBlocks {
+		flex-direction: column-reverse;
+	}
+	.offBlack, .blackBlack {
+		width: 100%;
+	} 
+	.workMiddle {
+		flex-direction: column
+	}
+	.contactInner {
+		width: 100%;
+	}
+	footer div {
+		width: 100%;
+	}
+	
+}
+
+@media (max-width: 575px) {
+
+	.headerText h1 {
+		font-size: 66px;
+	}
+	.headerText {
+		padding: 0;
+	}
+
+	.navList a {
+		padding: 0 10px;
+	}
+
+	.contactSection {
+		padding-bottom: 20px;
+	}
+	.contactInner{
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 0;
+	}
+	.socialBox {
+		width: 100%;
+		padding-top: 40px;
+		padding-bottom: 0;
+	}
+	.media, .emailList, .mapBox {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: 40px;
+	}
+	.emailList h3 {
+		margin: 0;
+		display: none;
+	}
+	.mapBox p {
+		margin: 0;
+	}
+	.fa-map-marker-alt {
+		display: none;
+	}
+	footer {
+		padding-top: 0;
+	}
+	.contactInner {
+		width: 100%;
+	}
+	.formBox {
+		width: 100%;
+	}
+
+	.left h2 {
+		width: 65%;
+	}
+	
+ }
+
+ @media (max-width: 400px) {
+	 .toolBox i {
+		 font-size: 80px;
+	 }
+	 .redux {
+		 width: 80px;
+		 height: 80px;
+	 }
+ }
+
